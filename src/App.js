@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import SignUpPage from './pages/SignUpPage'
+import LanguageSelector from './components/LanguageSelector'
+import HomePage from './pages/HomePage'
+import LoginPage from './pages/LoginPage'
+import { Route } from 'react-router-dom'
+import UserPage from './pages/UserPage'
+import AccountActivationPage from './pages/AccountActivationPage'
+import NavBar from './components/NavBar'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <NavBar />
+      <div className="container pt-4">
+        <Route exact path="/" component={HomePage} />
+        <Route path="/signup" component={SignUpPage} />
+        <Route path="/login" component={LoginPage} />
+        <Route path="/user/:id" component={UserPage} />
+        <Route path="/activate/:token" component={AccountActivationPage} />
+        <div className="flex justify-center py-4">
+          <LanguageSelector text="text prop is set" />
+        </div>
+      </div>
+    </>
+  )
 }
 
-export default App;
+export default App

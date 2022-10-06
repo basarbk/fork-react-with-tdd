@@ -1,0 +1,12 @@
+{
+  "signUp": "Regístrate",
+  "username": "Nombre de usuario",
+  "email": "Correo electrónico",
+  "password": "Contraseña",
+  "passwordRepeat": "Contraseña otra vez",
+  "passwordMismatchValidation": "Falta de coincidencia de contraseña",
+  "users": "Usuarios",
+  "nextPage": "siguiente >",
+  "previousPage": "< anterior",
+  "login": "Iniciar"
+}
