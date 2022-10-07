@@ -8,7 +8,7 @@ import store from '../state/store'
 const AllTheProviders = ({ children }) => {
   return (
     <Router>
-      <Provider store={store}>
+      <Provider store={store()}>
         {children}
         <LanguageSelector />
       </Provider>

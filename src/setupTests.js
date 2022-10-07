@@ -14,7 +14,7 @@ afterEach(() => {
   act(() => {
     i18n.changeLanguage('en')
   })
-  store.dispatch(logout())
+  store().dispatch(logout())
   storage.clear()
   cleanup()
 })

@@ -11,7 +11,7 @@ import store from './state/store'
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <Router>
-    <Provider store={store}>
+    <Provider store={store()}>
       <App />
     </Provider>
   </Router>
